@@ -12,14 +12,9 @@ export class ValueComponent implements OnInit {
 
   values!:Value[];
   ngOnInit(): void {
-    this.getValues().subscribe((respoonse)=>{
-      this.values=respoonse;
-      console.log(this.values)
-    });
+   
   }
-  getValues(){
-    return this._http.get<Value[]>("https://localhost:7138/api/Values");
-  }
+ 
 
 
 }

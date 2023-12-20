@@ -11,7 +11,7 @@ using System.Security.Claims;
 
 namespace CityGuide.API.Controllers;
 
-[Route("api/[cities/{id}/photos]")]
+[Route("api/cities/{cityId}/photos")]
 [ApiController]
 public class PhotosController : ControllerBase
 {
