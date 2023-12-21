@@ -5,4 +5,5 @@ export class City{
     declare name: string;
     declare description: string;
     declare photoUrl: string;
+    declare photos?:Photo[];
 }
