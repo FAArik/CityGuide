@@ -14,6 +14,7 @@ import { CityComponent } from './city/city.component';
 import { CityDetailComponent } from './city/city-detail/city-detail.component';
 import { CityAddComponent } from './city/city-add/city-add.component';
 import { AlertifyService } from './services/alertify.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AlertifyService } from './services/alertify.service';
     NavComponent,
     CityComponent,
     CityDetailComponent,
-    CityAddComponent
+    CityAddComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

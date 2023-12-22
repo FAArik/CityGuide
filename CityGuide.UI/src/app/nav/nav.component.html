@@ -41,6 +41,7 @@
         <button class="btn btn-secondary my-2 my-sm-0 w-50" [disabled]="!loginForm.valid" type="submit">Giriş
           Yap</button>
       </form>
+      <button *ngIf="auth" class="btn btn-danger my-2 my-sm-0" (click)="logout()" type="submit">Çıkış Yap</button>
     </div>
   </div>
 </nav>
