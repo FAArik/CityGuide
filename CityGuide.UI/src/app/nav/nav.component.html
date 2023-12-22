@@ -8,7 +8,7 @@
     <div class="navbar-collapse collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="city" routerLinkActive="active">City
+          <a class="nav-link" routerLink="city" routerLinkActive="active">Şehirler
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
@@ -33,9 +33,13 @@
           </div>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      <form #loginForm="ngForm" *ngIf="!auth" (ngSubmit)="login(loginForm)" class="d-flex">
+        <input class="form-control me-sm-2" type="text" id="userName" name="userName" required ngModel
+          #userName="ngModel" placeholder="Kullanıcı Adı">
+        <input class="form-control me-sm-2" type="text" id="password" name="password" required ngModel
+          #password="ngModel" placeholder="Şifre">
+        <button class="btn btn-secondary my-2 my-sm-0 w-50" [disabled]="!loginForm.valid" type="submit">Giriş
+          Yap</button>
       </form>
     </div>
   </div>

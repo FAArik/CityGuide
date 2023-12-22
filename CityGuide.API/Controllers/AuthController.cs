@@ -3,6 +3,7 @@ using CityGuide.API.Dtos;
 using CityGuide.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -66,7 +67,7 @@ public class AuthController : ControllerBase
         };
         var token = tokenHandler.CreateToken(tokenDescriptor);
         var tokenstring = tokenHandler.WriteToken(token);
-        return Ok(tokenstring);
+        return Ok(JsonConvert.SerializeObject(tokenstring));
     }
 
 }

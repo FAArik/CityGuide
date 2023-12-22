@@ -5,6 +5,7 @@ import { City } from '../models/city.model';
 import { Photo } from '../models/photo.model';
 import { AlertifyService } from './alertify.service';
 import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class CityService {
 
   constructor(private _http: HttpClient, private alertifyService: AlertifyService,
-    private router: Router) { }
+    private router: Router, private auth:AuthService) { }
   path = "https://localhost:7138/api/"
 
   getCities(): Observable<City[]> {
