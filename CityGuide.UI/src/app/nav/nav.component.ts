@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { LoginUser } from '../models/loginuser.model';
 import { NgForm } from '@angular/forms';
@@ -8,16 +8,14 @@ import { NgForm } from '@angular/forms';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
-   
-  }
+
   login(form: NgForm) {
     if (form.valid) {
-      this.authService.login(form.value);
+      this.authService.login({ userName: form.value.userName, password: form.value.loginpassword });
     }
   }
 
@@ -25,7 +23,7 @@ export class NavComponent implements OnInit {
     this.authService.logout();
   }
 
-  get auth(){
+  get auth() {
     return this.authService.loggedIn();
   }
 

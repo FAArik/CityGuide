@@ -24,6 +24,9 @@
     "font-awesome": "^4.7.0",
     "jwt-decode": "^4.0.0",
     "ng-gallery": "^11.0.0",
+    "ng2-file-upload": "^5.0.0",
+    "ngx-bootstrap": "^12.0.0",
+    "ngx-editor": "^16.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

@@ -19,7 +19,7 @@
           <a class="nav-link" routerLink="cityadd" routerLinkActive="active">Şehir Ekle</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" routerLink="register" routerLinkActive="active">Kayıt Ol</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -36,11 +36,12 @@
       <form #loginForm="ngForm" *ngIf="!auth" (ngSubmit)="login(loginForm)" class="d-flex">
         <input class="form-control me-sm-2" type="text" id="userName" name="userName" required ngModel
           #userName="ngModel" placeholder="Kullanıcı Adı">
-        <input class="form-control me-sm-2" type="text" id="password" name="password" required ngModel
-          #password="ngModel" placeholder="Şifre">
+        <input class="form-control me-sm-2" type="text" id="loginpassword" name="loginpassword" required ngModel
+          #loginpassword="ngModel" placeholder="Şifre">
         <button class="btn btn-secondary my-2 my-sm-0 w-50" [disabled]="!loginForm.valid" type="submit">Giriş
           Yap</button>
       </form>
+      <button *ngIf="auth" class="btn btn-danger my-2 my-sm-0" (click)="logout()" type="submit">Çıkış Yap</button>
     </div>
   </div>
 </nav>

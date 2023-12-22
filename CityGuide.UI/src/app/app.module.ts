@@ -14,6 +14,10 @@ import { CityComponent } from './city/city.component';
 import { CityDetailComponent } from './city/city-detail/city-detail.component';
 import { CityAddComponent } from './city/city-add/city-add.component';
 import { AlertifyService } from './services/alertify.service';
+import { RegisterComponent } from './register/register.component';
+import { PhotoComponent } from './photo/photo.component';
+import { NgxEditorModule } from 'ngx-editor';
+import { FileUploadModule } from "ng2-file-upload";
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { AlertifyService } from './services/alertify.service';
     NavComponent,
     CityComponent,
     CityDetailComponent,
-    CityAddComponent
+    CityAddComponent,
+    RegisterComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,17 +37,20 @@ import { AlertifyService } from './services/alertify.service';
     GalleryModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEditorModule,
+    FileUploadModule
+
   ],
-  providers:[
+  providers: [
     {
-    provide: GALLERY_CONFIG,
-    useValue: {
-      autoHeight: true,
-      imageSize: 'cover'
-    } as GalleryConfig
-  },
-  AlertifyService],
+      provide: GALLERY_CONFIG,
+      useValue: {
+        autoHeight: true,
+        imageSize: 'cover'
+      } as GalleryConfig
+    },
+    AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

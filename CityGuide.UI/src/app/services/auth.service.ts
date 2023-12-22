@@ -43,6 +43,8 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem(this.TOKEN_KEY)
+    this.decodedToken = undefined;
+    this.alertifyService.error("Sistemden çıkış yapıldı!");
   }
   loggedIn() {
     if (this.decodedToken) {

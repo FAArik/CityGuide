@@ -33,7 +33,7 @@ public class PhotosController : ControllerBase
         _cloudinary = new Cloudinary(account);
     }
     [HttpPost("[action]")]
-    public ActionResult AddPhotoForCity(int cityId, [FromBody] PhotoForUploadDto uploadDto)
+    public ActionResult AddPhotoForCity(int cityId, [FromForm] PhotoForUploadDto uploadDto)
     {
         var city = _appRepository.GetCityById(cityId);
         if (city == null)
