@@ -15,9 +15,12 @@ import { CityDetailComponent } from './city/city-detail/city-detail.component';
 import { CityAddComponent } from './city/city-add/city-add.component';
 import { AlertifyService } from './services/alertify.service';
 import { RegisterComponent } from './register/register.component';
+<<<<<<< HEAD
 import { PhotoComponent } from './photo/photo.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { FileUploadModule } from "ng2-file-upload";
+=======
+>>>>>>> f5aea375bda4f7eaedd1fe657229de7ab6a16ffa
 
 @NgModule({
   declarations: [
